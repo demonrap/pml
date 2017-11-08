@@ -1,4 +1,13 @@
-﻿@{
+﻿@model IEnumerable<PmlMvc.Models.ap_marchi>
+@{
     ViewBag.Title = "Dashboard";
 }
 
+
+<ul>
+    @foreach (var x in Model)
+    {
+        <li>@x.descrizione</li>
+    }
+    
+</ul>

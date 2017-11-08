@@ -11,16 +11,14 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" type="image/png" href="@Url.Content("~/assets/img/favicon.png")" />
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <div class="warpper">
         @Html.Partial("_SideBar")
-        <div class="main-panel">
-            @RenderBody()
+        <div class="main-panel">            
             @Html.Partial("_NavBar")
             <div class="content">
-
+                @RenderBody()
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PmlMvc.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,18 @@ namespace PmlMvc.Controllers
 {
     public class HomeController : Controller
     {
+        private PmContext db = new PmContext();
+
         public ActionResult Index()
         {
-            return View();
+            var model = db.ap_marchi.ToList();
+            return View(model);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
         }
     }
 }
