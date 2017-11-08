@@ -19,13 +19,21 @@ namespace PmlMvc
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            bundles.Add(new ScriptBundle("~/bundles/theme").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/theme/material.js",
+                      "~/Scripts/theme/chartist.js",
+                      "~/Scripts/theme/arrive.js",
+                      "~/Scripts/theme/perfect-scrollbar.jquery.js",
+                      "~/Scripts/theme/bootstrap-notify.js",
+                      "~/Scripts/theme/material-dashboard.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/material-dashboard.css"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
